@@ -152,16 +152,12 @@ const Roles = () => {
   }
 
   function formatearFechas(fechaUTC) {
-    const fechaLocal = new Date(fechaUTC);
-
-    const fechaLocalString = fechaLocal.toLocaleString('es-ES', { timeZone: 'America/Mexico_City' });
-
-    // formato "HH:mm"
-    const horas = fechaLocal.getHours().toString().padStart(2, '0');
-    const minutos = fechaLocal.getMinutes().toString().padStart(2, '0');
-
+    const fechaString = fechaUTC.split("T")[1];
+    
+    const horas = fechaString.split(":")[0];
+    const minutos = fechaString.split(":")[1];
     const horaFormateada = `${horas}:${minutos}`;
-
+    
     return horaFormateada
   }
 
