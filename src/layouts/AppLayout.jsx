@@ -35,14 +35,16 @@ const AppLayout = () => {
 
   return (
     <div className='bg-gray-800 min-h-screen flex flex-col'>
-      <header className='w-full py-6 px-8 flex flex-col lg:flex-row gap-x-8 justify-between items-center'>
+      <header className='w-full py-6 px-8 flex flex-col gap-x-8 justify-between items-center overflow-x-auto'>
         <h1 className='text-2xl text-blue-600 font-medium text-center lg:text-left mb-2 lg:mb-0'>Pase de Lista (Administración)</h1>
         <nav className='text-white flex gap-4 items-center'>
           <Link to={'/'} className='p-2 rounded-lg border-2 border-transparent hover:border-white hover:bg-gray-900 hover:shadow-lg text-lg font-medium w-32 text-center'>Hoy</Link>
+          <Link to={'/mensual'} className='p-2 rounded-lg border-2 border-transparent hover:border-white hover:bg-gray-900 hover:shadow-lg text-lg font-medium w-32 text-center'>Mensual</Link>
           <Link to={'/justificantes'} className='p-2 rounded-lg border-2 border-transparent hover:border-white hover:bg-gray-900 hover:shadow-lg text-lg font-medium w-32 text-center'>Justificantes</Link>
           <Link to={'/trabajadores'} className='p-2 rounded-lg border-2 border-transparent hover:border-white hover:bg-gray-900 hover:shadow-lg text-lg font-medium w-32 text-center'>Trabajadores</Link>
           <Link to={'/roles'} className='p-2 rounded-lg border-2 border-transparent hover:border-white hover:bg-gray-900 hover:shadow-lg text-lg font-medium w-32 text-center'>Roles</Link>
           <Link to={'/graficas'} className='p-2 rounded-lg border-2 border-transparent hover:border-white hover:bg-gray-900 hover:shadow-lg text-lg font-medium w-32 text-center'>Gráficas</Link>
+          <Link to={'/ubicacion'} className='p-2 rounded-lg border-2 border-transparent hover:border-white hover:bg-gray-900 hover:shadow-lg text-lg font-medium w-32 text-center'>Ubicación</Link>
         </nav>
       </header>
 

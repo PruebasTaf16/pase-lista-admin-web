@@ -14,6 +14,8 @@ import Trabajadores from "./pages/private/Trabajadores"
 import ActualizarPassword from "./pages/ActualizarPassword"
 import Justificantes from "./pages/private/Justificantes"
 import ActualizarPasswordTrabajador from "./pages/ActualizarPasswordTrabajador"
+import Ubicacion from "./pages/private/Ubicacion"
+import Mensual from "./pages/private/Mensual"
 
 /**Manejar todas las rutas públicas y privadas */
 function App() {
@@ -32,10 +34,12 @@ function App() {
 
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Home />}/>
+            <Route path="/mensual" element={<Mensual />}/>
             <Route path="/trabajadores" element={<Trabajadores />}/>
             <Route path="/roles" element={<Roles />}/>
             <Route path="/graficas" element={<Graficas />}/>
             <Route path="/justificantes" element={<Justificantes />}/>
+            <Route path="/ubicacion" element={<Ubicacion />}/>
           </Route>
         </Routes>
       </AuthProvider>
